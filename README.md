@@ -188,6 +188,8 @@ If this variable is missing or invalid, the app does **not** crash — the AI in
 
 This app is deployed on **Render** (free tier) as a Python web service.
 
+[Render Link](https://vantage-ai-powered-data-dashboard.onrender.com/)
+
 **Build command:** `pip install -r requirements.txt`
 **Start command:** `gunicorn app:app`
 
