@@ -25,7 +25,7 @@ Upload a dataset, and Vantage automatically detects its structure, computes key 
 
 ## Live Demo
 
-[Add your live Render URL here once deployed, e.g. `https://vantage-dashboard.onrender.com`]
+[Vantage - "AI-Powered Data Dashboard"](https://vantage-ai-powered-data-dashboard.onrender.com/)
 
 ---
 
