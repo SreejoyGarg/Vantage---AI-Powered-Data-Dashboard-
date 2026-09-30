@@ -1,0 +1,11 @@
+Date,Region,Category,Units Sold,Unit Price,Revenue
+2025-01-01,East,Electronics,13,111.54,1450.02
+2025-01-01,East,Clothing,16,415.15,6642.40
+2025-01-02,South,Groceries,5,179.08,895.40
+2025-01-02,South,Groceries,2,57.81,115.62
+2025-01-02,North,Electronics,4,413.36,1653.44
+2025-01-03,West,Furniture,8,220.10,1760.80
+2025-01-03,North,Clothing,11,95.30,1048.30
+2025-01-04,East,Groceries,3,150.00,450.00
+2025-01-04,South,Furniture,6,310.75,1864.50
+2025-01-05,West,Electronics,9,275.20,2476.80

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vantage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-brand">
+            <span class="logo-mark"></span>
+            <span class="logo-text">Vantage</span>
+            <span class="topbar-tagline">Data intelligence, Instantly</span>
+        </div>
+
+        <div class="topbar-file-info" id="topbar-file-info">
+            <span id="current-filename"></span>
+            <button type="button" id="replace-file-btn">Replace file</button>
+        </div>
+    </div>
+
+    <input type="file" id="csv_file" name="csv_file" accept=".csv" hidden>
+
+    <div id="empty-state" class="empty-state">
+        <form id="upload-form" class="upload-zone">
+            <div class="upload-icon">⤒</div>
+            <h1>Upload a CSV to build your report</h1>
+            <p>Drop a file here, or click below to browse. Works with most public datasets.</p>
+            <button type="submit" id="analyze-btn">Choose file</button>
+        </form>
+    </div>
+
+    <p id="sample-note" class="sample-note"></p>
+
+    <div id="results" class="results">
+        <div class="dashboard-layout">
+            <aside class="filter-panel">
+                <div class="filter-panel-header">
+                    <h3>Filters</h3>
+                    <button type="button" id="reset-filters">Reset all</button>
+                </div>
+
+                <div class="metric-select-block">
+                    <label for="metric-select">Metric</label>
+                    <select id="metric-select"></select>
+                </div>
+
+                <div id="filter-groups"></div>
+            </aside>
+
+            <main class="dashboard-main">
+                <div class="stat-row" id="stat-row"></div>
+
+                <div class="chart-grid" id="chart-grid"></div>
+
+                <div class="visual-card insight-card">
+                    <div class="visual-header">
+                        <span>AI Insight</span>
+                        <span class="visual-menu">⋯</span>
+                    </div>
+                    <div class="visual-body">
+                        <p id="ai-insight-text"></p>
+                        <p class="insight-note">Based on the full uploaded dataset, before filters.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
